@@ -1,0 +1,46 @@
+Project Description:
+Title: Flight Price Prediction
+
+Objective:
+The goal of this project is to predict the price of airline tickets based on various features such as the airline, source, destination, total stops, additional information, etc. The dataset includes information about the flights, including their date of journey, departure and arrival times, duration, and price.
+
+Dataset Overview:
+The dataset consists of the following columns:
+
+Airline: The airline company operating the flight.
+Source: The city from which the flight departs.
+Destination: The city where the flight arrives.
+Total_Stops: The total number of stops during the flight.
+Additional_Info: Additional information about the flight.
+Price: The target variable - the price of the airline ticket.
+Data Preprocessing:
+
+The Date_of_Journey column is converted to datetime, and three new columns (year, month, day) are created to capture the temporal aspects.
+The Arrival_Time and Dep_Time columns are processed to extract the hour and minute information.
+The Total_Stops column is converted to numerical format.
+The Route column is dropped as it is not required for the analysis.
+The Duration column is split into two new columns (Duration_hour and Duration_min) to represent the duration of the flight in hours and minutes.
+Categorical columns such as Airline, Source, Destination, and Additional_Info are label-encoded.
+Feature Engineering:
+
+New features like Arrival_hour, Arrival_min, Dept_hour, Dept_min are created to represent the hour and minute information of arrival and departure times.
+The Duration_hour column is converted to represent the total duration in minutes.
+The Total_Duration(min) column is created by adding Duration_hour and Duration-min.
+Handling Missing Values:
+
+Rows with missing values in the Total_Stops column are dropped.
+Rows with anomalies in the Duration_hour and Duration-min columns are dropped.
+Final Dataset:
+The dataset is now ready for further analysis and model building with features engineered and missing values handled.
+
+Data Analysis and Modeling:
+The next steps could include exploratory data analysis (EDA) to gain insights into the data and the distribution of features. After that, various machine learning models can be employed for predicting the flight prices, and the performance of these models can be evaluated.
+
+Note:
+Make sure to split the data into training and testing sets before building and evaluating the models. Additionally, you may want to explore different algorithms, perform hyperparameter tuning, and assess feature importance for a more comprehensive analysis.
+
+
+
+
+
+
